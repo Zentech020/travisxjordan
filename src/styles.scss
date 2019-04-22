@@ -1,0 +1,436 @@
+@font-face {
+  font-family: "TitleFont";
+  src: url("./fonts/Futura-Condensed-Extra-Bold.otf") format("opentype"),
+}
+
+@font-face {
+  font-family: "BrushFont";
+  src: url("./fonts/NanumBrushScript-Regular.ttf") format("truetype"),
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'TitleFont', sans-serif;
+}
+
+h2 {
+  font-family: 'TitleFont', sans-serif;
+  font-size: 50px;
+}
+
+h3 {
+  font-family: 'TitleFont', sans-serif;
+  font-size: 24px;
+}
+
+h4 {
+  font-family: 'TitleFont', sans-serif;
+  font-size: 20px;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.8em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+section {
+  padding: 50px 0;
+}
+
+
+.btn {
+  padding: 15px;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  font-family: 'TitleFont', sans-serif;
+
+  &--outline-white {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+
+  &--black {
+    background: black;
+    color: white;
+  }
+}
+
+
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background:yellow;
+  background-image: url(./images/hero/bg.jpeg);
+  background-size: cover;
+  background-position: center;
+
+  &__topBar {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+    p {
+      color: white;
+      opacity: 0.8;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    h1 {
+      font-size: 100px;
+      text-align: center;
+      color: white;
+      max-width: 600px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        font-family: 'TitleFont', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__middle {
+    // display: flex;
+    // justify-content: space-around;
+    margin-top: 100px;
+
+    &__shoe {
+      z-index: 2;
+
+      img {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        color: white;
+      }
+
+      a {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+     width: 15%;
+    }
+  }
+
+  .attribute {
+    position: absolute;
+
+    &--smiley {
+      top: 21%;
+      left: 21%;
+      width: 10%;
+    }
+
+    &--sign {
+      bottom: 0;
+      left: 200px !important;
+      top: auto !important;
+      z-index: 5;
+    }
+
+    &--moon {
+      top: 20%;
+      left: 11%;
+      width: 4%;
+    }
+
+    &--brushText {
+      top: 24%;
+      right: 27%;
+      font-family: 'BrushFont', sans-serif;
+      font-size: 60px;
+      color: #e292ad;
+      transform: rotate(10deg);
+    }
+
+    &--cloud {
+      top:30% !important;
+      left: 50% !important;
+      margin-left: -360px;
+      animation: movingclouds 25s linear infinite;
+    }
+
+    &--cactus {
+      bottom: 0;
+      left: 170px;
+      z-index: 1;
+    }
+
+    &--shoe {
+      bottom: 278px;
+      z-index: 99;
+      left: 11px;
+    }
+
+    &--cactus-right {
+      bottom: 453px;
+      left: 344px;
+      z-index: 1000;
+  }
+
+    &--cactus-left {
+      bottom: 210px;
+      left: 42px;
+      z-index: 1;
+    }
+
+    &--cactus-little {
+      top: auto !important;
+      bottom: 0;
+      left: 500px !important;
+      z-index: 1;
+    }
+
+    &--skeleton {
+      z-index: 100;
+      bottom: 0;
+      left: 50px;
+    }
+
+    &--flame-right {
+      bottom: 340px;
+      left: 300px;
+      z-index: 2000;
+    }
+
+    &--flame-by-left-top {
+      bottom: 700px;
+      left: 20px;
+      z-index: 1;
+      transform: rotate(331deg);
+    }
+
+    &--flame-by-right-top {
+      bottom: 753px;
+      left: 182px;
+      z-index: 1;
+    }
+
+    &--flame-left {
+      bottom: 398px;
+      left: -106px;
+      z-index: 0;
+      transform: rotate(331deg);
+      z-index: 3;
+    }
+
+    &--heroBg {
+      bottom: 0;
+      right: 0 !important;
+      left: 50% !important;
+      top: auto !important;
+      min-width: 1920px;
+      width: 100%;
+      overflow: hidden;
+      margin-left: -960px;
+    }
+  }
+
+}
+.info {
+  position: relative;
+
+  &__shoe {
+    position: relative;
+
+    .shoe-mark {
+      position: absolute;
+
+      &--1 {
+        top:17%;
+        left: 25%;
+      }
+
+      &--2 {
+        top:67%;
+        left: 30%;
+      }
+
+      &--3 {
+        top:47%;
+        left: 55%;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 300px;
+  }
+
+  &__gallery {
+
+    &__shoe {
+      z-index: 99;
+      margin-top: 100px;
+      margin-right: 100px;
+    }
+
+    .gallery_obj {
+      position: absolute;
+
+
+      &--1 {
+        top: 41%;
+        left: 38%;
+        z-index: -1;
+        width: 150px;
+      }
+
+
+      &--2 {
+        top: 47%;
+        left: 7%;    
+      }
+
+      &--3 {
+        top: 43%;
+        left: 22%;
+        z-index: 1;
+      }
+
+      &--4 {
+        top: 55%;
+        left: 22%;
+      }
+
+      &--5 {
+        top: 74%;
+        right: 39%;    
+      }
+
+      &--6 {
+        top: 65%;
+        left: 12%;
+        z-index: 1; 
+      }
+
+      &--7 {
+        top: 60%;
+        right: -30%;
+        z-index: 1; 
+      }
+    }
+  }
+
+  &__description {
+    max-width: 400px;
+  }
+}
+
+.poster {
+  position: relative;
+  .abs-img {
+    position: absolute;
+
+    &--hoefijzer {
+      left: -50px;
+      top:20px;
+      z-index: 100;
+    }
+
+    &--splash {
+      left: 2%;
+      top: 33%;
+      z-index: 0;
+
+    }
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__gallery {
+    
+
+    &__card {
+      background: white;
+      height: 100px;
+      width: 100px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12),
+      0 2px 4px 0 rgba(0,0,0,0.08);
+    }
+  }
+
+  &__info {
+    max-width: 400px;
+  }
+}
+
+.about {
+  position: relative;
+
+  .abs-img {
+    position: absolute;
+
+    &--sherif {
+      top: -43%;
+      right: -10%;
+    }
+  }
+}
+
+#border-bg {
+
+  background-image: url('./images/paper-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.cactus {
+  bottom: 0;
+  left: 50% !important;
+  top: auto !important;
+  margin-left: -255px;
+}
+
+@keyframes movingclouds {
+  0% {margin-left: 0%;}
+  100% {margin-left: -100%;}
+}
