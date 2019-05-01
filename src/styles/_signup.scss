@@ -1,0 +1,59 @@
+.signup {
+  margin-top: 100px;
+
+  position: relative;
+  &__subscribe {
+    height: 250px;
+    width: 500px;
+    margin-top: 30px;
+    background: white;
+    padding: 30px;
+
+    @include mobile {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    input {
+      border: 1px solid black;
+      width: 100%;
+      height: 50px;
+      margin-bottom: 10px;
+      
+    }
+  }
+  .abs-img {
+    position: absolute;
+
+    &--bordFooter {
+      width: 53%;
+      left: 21%;
+
+      @include mobile{
+        width: 100%;
+      }
+    }
+
+    &--coins {
+      bottom: 0;
+      right: 0;
+    }
+
+    &--mrSkeleton {
+      top: -59%;
+      width: 40%;
+      left: 29%;
+    }
+
+    &--flameLeft {
+      left: 8%;
+      top: -48%;
+      transform: rotate(330deg);
+    }
+
+    &--flameRight {
+      right: 12%;
+      top: -47%;
+    }
+  }
+}

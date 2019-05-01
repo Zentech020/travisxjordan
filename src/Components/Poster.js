@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Client from 'shopify-buy';
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import poster from '../images/poster.png';
 import hoefIJzer from '../images/hoefijzer.png';
 import splash from '../images/splash.png';
+
 
 const client = Client.buildClient({
   domain: 'travisxjordan.myshopify.com',
@@ -17,6 +19,8 @@ class Poster extends Component {
     this.state = {
       checkout: { lineItems: [] },
       products: [],
+      features_collapse: false,
+      shipping_collapse: false
     }
   }
 
@@ -50,17 +54,28 @@ class Poster extends Component {
       alert('error');
       console.log(err);
     });
-
   }
+
+  toggleFeatures = () => {
+    this.setState(state => ({ features_collapse: !state.features_collapse }));
+  }
+
+  toggleShipping = () => {
+    this.setState(state => ({ shipping_collapse: !state.shipping_collapse }));
+  }
+
   render() {
     return (
       <section className="section poster" id="poster">
         <img src={hoefIJzer} className="abs-img abs-img--hoefijzer" />
         <img src={splash} className="abs-img abs-img--splash" />
         <div className="container poster">
-          <div className="row d-flex justify-content-center my-3">
+          <div className="row d-flex justify-content-center my-3 text-center">
             <div className="section__intro my-3">
+              <p className="tagline text-center">POSTER</p>
               <h2 className="title">LIMITED FAN MADE POSTER</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+              <h4 className="d-block d-sm-none">$28.42</h4>
             </div>
           </div>
           <div className="row my-3">
@@ -75,19 +90,57 @@ class Poster extends Component {
             <div className="col-sm">
               <div className="poster__info">
                 <div className="poster__info__header">
-                  <h3>LIMITED TRAVIS SCOTT X AIR JORDAN 1 POSTER</h3>
+                  <h3>DESCRIPTION</h3>
                   <h3 className="poster__info__price my-3">
 
                   </h3>
                 </div>
                 <p className="my-3">Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Cras risus ipsum, faucibus ut, ullamcorper id, varius ac, leo. Donec mollis hendrerit risus. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam.Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla.</p>
-                <div className="poster__info__specs my-3">
-                  <p>- 50 x 90 cm</p>
-                  <p>- sicko quality print</p>
-                  <p>- lit design</p>
-                  <p>- at least you got the f*cking poster</p>
+                <div className="poster__features d-flex justify-content-between py-2" onClick={() => this.toggleFeatures()}>
+                  <p>Features</p>
+                  {this.state.features_collapse ?
+                    (
+                      <p>&#9650;</p>
+                    ) : (
+
+                      <p>&#9660;</p>
+                    )
+                  }
+
                 </div>
-                <div className="poster__info__order">
+                <Collapse isOpen={this.state.features_collapse}>
+                  <div className="poster__info__specs my-3">
+                    <p>- 50 x 90 cm</p>
+                    <p>- sicko quality print</p>
+                    <p>- lit design</p>
+                    <p>- at least you got the f*cking poster</p>
+                  </div>
+                </Collapse>
+
+                <div className="poster__shipping d-flex justify-content-between py-2" onClick={() => this.toggleShipping()}>
+                  <p>Shipping</p>
+                  {this.state.features_collapse ?
+                    (
+                      <p>&#9650;</p>
+                    ) : (
+
+                      <p>&#9660;</p>
+                    )
+                  }
+                </div>
+                <Collapse isOpen={this.state.shipping_collapse}>
+                  <div className="poster__info__specs my-3">
+                    <p>Posters will be shipped within 2 weeks. The posters will be send in a tube. See shipping rates below</p>
+                    <div className="mt-4">
+                      <p>EU: 3-5 days, 10 euro</p>
+                      <p>EU: 3-5 days, 10 euro</p>
+                      <p>EU: 3-5 days, 10 euro</p>
+                    </div>
+                  </div>
+                </Collapse>
+
+                <div className="poster__info__order mt-5">
+                  <p>$35.00</p>
                   <button onClick={() => this.addPoster()} className="btn btn--black">ORDER POSTER</button>
                 </div>
               </div>
