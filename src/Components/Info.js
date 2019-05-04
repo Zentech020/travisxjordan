@@ -47,13 +47,15 @@ class Info extends Component {
 
           <div className="row justify-content-end">
             <div className="info__gallery">
-              <img src={galleryShoe} className="info__gallery__shoe" />
-              <img src={smiley} className="gallery_obj gallery_obj--1" />
-              <img src={travis1} className="gallery_obj gallery_obj--2" />
-              <img src={travis2} className="gallery_obj gallery_obj--3" />
-              <img src={travis3} className="gallery_obj gallery_obj--4" />
-              <img src={cactus} className="gallery_obj gallery_obj--5" />
-              <img src={momText} className="gallery_obj gallery_obj--6" />
+              <img src={galleryShoe} className="info__gallery__shoe d-none d-sm-block" />
+              <div className="info__gallery__mobile-composition">
+                <img src={smiley} className="gallery_obj gallery_obj--1" />
+                <img src={travis1} className="gallery_obj gallery_obj--2" />
+                <img src={travis2} className="gallery_obj gallery_obj--3" />
+                <img src={travis3} className="gallery_obj gallery_obj--4" />
+                <img src={cactus} className="gallery_obj gallery_obj--5" />
+                <img src={momText} className="gallery_obj gallery_obj--6" />
+              </div>
             </div>
           </div>
           <div className="row">
@@ -63,6 +65,7 @@ class Info extends Component {
               Suspendisse potenti. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Phasellus a est. Vestibulum ullamcorper mauris at ligula. Etiam rhoncus.
               In ut quam vitae odio lacinia tincidunt. Nunc nonummy metus. Vivamus quis mi. Sed libero.
               </p>
+              <img src={galleryShoe} className="info__gallery__shoe d-block d-sm-none" />
             </div>
           </div>
         </div>

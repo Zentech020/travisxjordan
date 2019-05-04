@@ -31,6 +31,7 @@
 
       @include mobile{
         width: 100%;
+        left: 0;
       }
     }
 
@@ -43,6 +44,11 @@
       top: -59%;
       width: 40%;
       left: 29%;
+
+      @include mobile{
+        width: 100%;
+        left: 0;
+      }
     }
 
     &--flameLeft {
