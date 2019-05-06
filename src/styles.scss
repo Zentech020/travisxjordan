@@ -39,7 +39,6 @@ $desktop-width: 1024px;
 body {
   margin: 0;
   padding: 0;
-  overflow-x:hidden;
 }
 
 h1 {
@@ -49,6 +48,10 @@ h1 {
 h2 {
   font-family: 'TitleFont', sans-serif;
   font-size: 50px;
+
+  @include mobile {
+    font-size: 30px;
+  }
 }
 
 h3 {
@@ -64,7 +67,8 @@ h4 {
 p {
   font-family: 'Libre Baskerville', serif;
   line-height: 1.8em;
-  font-size: 12px;
+  font-size: 16px;
+  opacity: 0.65;
 }
 
 h1,
@@ -80,6 +84,18 @@ p {
 
 section {
   padding: 50px 0;
+
+  @include mobile {
+    padding: 25px 0;
+  }
+}
+
+.section {
+  &__intro {
+    @include mobile {
+      text-align: center;
+    }
+  }
 }
 
 
@@ -119,6 +135,15 @@ section {
   background-size: cover;
   background-position: center;
   pointer-events: auto !important;
+  border-image: url(https://i.imgur.com/p77A0Ik.png) 29 29 29 24 stretch stretch !important;
+  border-color: #f4be52;
+  border-style: inset;
+  border-width: 19px;
+  overflow: hidden;
+
+  @include mobile {
+    border-width: 12px;
+  }
 
   &__mobile-menu {
     display: none;
@@ -142,8 +167,12 @@ section {
     display: flex;
     justify-content: center;
 
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
     @include mobile {
-      display: none;
+      padding: 0px;
     }
 
     p {
@@ -156,6 +185,7 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position:relative;
 
     @include mobile {
       flex-direction: column;
@@ -231,6 +261,7 @@ section {
 
       p {
         color: white;
+        opacity: 1.0;
       }
 
       a {
@@ -256,8 +287,8 @@ section {
     position: absolute;
 
     &--smiley {
-      top: 21% !important;
-      left: 21% !important;
+      top: 69% !important;
+      left: 15% !important;
       width: 10%;
 
       @include mobile{
@@ -283,21 +314,28 @@ section {
       top: 35% !important;
       left: 11% !important;
       width: 4%;
+
+      @include mobile {
+        top: 32%!important;
+        left: 11%!important;
+        width: 50px;
+      }
     }
 
     &--brushText {
-      left: auto !important;
-      top: 24% !important;
+      left: 735px !important;
+      top: 93% !important;
       right: 17%;
-      font-family: 'BrushFont', sans-serif;
+      font-family: BrushFont,sans-serif;
       font-size: 60px;
       color: #e292ad;
       transform: rotate(10deg);
+      width: 50%;
 
       @include mobile {
-        top: 13% !important;
+        top: 20%!important;
         right: 5%;
-        left: auto !important;
+        left: auto!important;
         font-size: 30px;
       }
     }
@@ -307,52 +345,109 @@ section {
       right: 0% !important;
       left: auto !important;
       margin-left: -360px;
-      animation: movingclouds 25s linear infinite;
+      animation: movingclouds 15s infinite;
+      animation-iteration-count: 1;
     }
 
     &--cloud-1 {
       top:30% !important;
       left: 0% !important;
       margin-left: -360px;
-      animation: movingclouds 25s linear infinite;
+      animation: movingclouds 15s infinite;
+      animation-iteration-count: 1;
     }
 
     &--cloud-2 {
       top:30% !important;
       right: 0% !important;
       margin-left: -360px;
-      animation: movingclouds 25s linear infinite;
+      animation: movingclouds 15s infinite;
+      animation-iteration-count: 1;
     }
 
     &--jet {
       top: 34% !important;
       animation: flyingJet 25s linear infinite;
+
+      @include mobile {
+        top: 34%!important;
+        animation: flyingJet 25s linearinfinite;
+        left: 0px;
+        top: 190px !important;
+        width: 70px;
+      }
+    }
+
+    &--bird {
+      top: 70% !important;
+      left: auto !important;
+      right: 30% !important;
+    }
+
+    &--poster {
+      top: 67% !important;
+      left: 7% !important;
+      width: 100px;
+      z-index: 10;  
+      animation: sway 16s infinite;
+      transform-origin: top center;
     }
 
     &--cactus {
-      bottom: 0;
+      bottom: 0px;
       left: 205px;
       z-index: 1;
+      width: 200px;
+
+      @include mobile {
+        bottom: -15px;
+        left: 171px;
+        z-index: 1;
+        width: 169px;
+      }
     }
 
     &--shoe {
-      bottom: 320px;
+      bottom: 207px;
       z-index: 99;
-      left: 75px;
+      left: 103px;
+      width: 329px;
+
+      @include mobile {
+        bottom: 157px;
+        z-index: 99;
+        left: 81px;
+        width: 275px;
+      }
     }
 
     &--cactus-right {
-      bottom: 453px;
-      left: 382px;
+      bottom: 328px;
+      left: 330px;
       z-index: 1000;
+      width: 80px;
+
+      @include mobile {
+        bottom: 261px;
+        left: 276px;
+        z-index: 1000;
+        width: 68px;
+      }
 
   }
 
     &--cactus-left {
-      bottom: 238px;
-      left: 77px;
+      bottom: 162px;
+      left: 115px;
       z-index: 1;
+      width: 105px;
 
+      @include mobile {
+        bottom: 113px;
+        left: 94px;
+        z-index: 1;
+        width: 89px;
+      }
     }
 
     &--cactus-little {
@@ -363,56 +458,98 @@ section {
       width: 75px;
 
       @include mobile {
-        left: 50px !important;
-        bottom: 0;
-        transform: scale(0.5) !important;
+        left: 18px !important;
+        bottom: -25px;
+        width: 65px;
       }
     }
 
     &--skeleton {
       z-index: 100;
       bottom: 0;
-      left: 84px;
+      left: 121px;
+      width: 170px;
   
+      @include mobile {
+        z-index: 100;
+        bottom: -9px;
+        left: 117px;
+        width: 125px;
+      }
     }
 
     &--flame-right {
-      bottom: 340px;
-      left: 320px;
+      bottom: 245px;
+      left: 288px;
       z-index: 2000;
+      width: 214px;
+
+      @include mobile {
+        bottom: 184px;
+        left: 233px;
+        z-index: 2000;
+        width: 184px;
+      }
     }
 
     &--flame-by-left-top {
-      bottom: 700px;
-      left: 20px;
+      bottom: 516px;
+      left: 94px;
       z-index: 1;
       transform: rotate(331deg);
+      width: 208px;
+
+      @include mobile {
+        bottom: 400px;
+        left: 90px;
+        z-index: 1;
+        transform: rotate(331deg);
+        width: 149px;
+      }
     }
 
     &--flame-by-right-top {
-      bottom: 753px;
-      left: 182px;
+      bottom: 522px;
+      left: 203px;
       z-index: 1;
+      width: 210px;
+
+      @include mobile {
+           bottom: 376px;
+   left: 158px;
+   z-index: 1;
+   width: 180px;
+      }
     }
 
     &--flame-left {
-      bottom: 398px;
-      left: -81px;
+      bottom: 244px;
+      left: -24px;
       z-index: 0;
       transform: rotate(331deg);
       z-index: 3;
+      width: 230px;
+
+      @include mobile {
+        bottom: 198px;
+        left: -14px;
+        z-index: 0;
+        transform: rotate(331deg);
+        z-index: 3;
+        width: 182px;
+      }
     }
 
     &--heroBg {
       bottom: 0;
-      top: auto !important;
-      width: 100%;
-
+      top: auto!important;
+      width: 102%;   
 
       @include mobile {
-        min-width: $mobile-width;
+        min-width: 987px;
         margin-left: 0;
         left: 0;
+        left: -294px !important;
       }
     }
   }
@@ -424,6 +561,11 @@ section {
 
   &__shoe {
     position: relative;
+    margin-bottom: 100px;
+
+    @include mobile {
+      margin: 80px 0;
+    }
 
     .infoShoe {
       @include mobile {
@@ -438,16 +580,30 @@ section {
       &--1 {
         top:17%;
         left: 25%;
+
+        @include mobile {
+          top: 10%;
+          left: 3%;
+        }
       }
 
       &--2 {
         top:67%;
         left: 30%;
+
+        @include mobile {
+          left: 7%;
+        }
       }
 
       &--3 {
         top:47%;
         left: 55%;
+
+        @include mobile {
+          top: 51%;
+          left: 72%;
+        }
       }
     }
 
@@ -460,16 +616,33 @@ section {
       &--1 {
         top: 23%;
         left: 3%;
+
+        @include mobile {
+          top: -61px;
+          left: 38%;
+          transform: rotate(-15deg);
+        }
       }
 
       &--2 {
         bottom: 15%;
         left: 3%;
+
+        @include mobile {
+          bottom: -22%;
+          left: 33%;
+        }
       }
 
       &--3 {
         top: 35%;
         right: 12%;
+
+        @include mobile {
+          top: 25%;
+          right: 2%;
+          transform: rotate(-10deg);
+        }
       }
     }
     .shoe-arrow {
@@ -478,16 +651,33 @@ section {
       &--1 {
         top: 33%;
         left: 10%;
+
+        @include mobile {
+          top: 0;
+          left: 44%;
+          transform: rotate(167deg);
+        }
       }
 
       &--2 {
         bottom: 3%;
         left: 10%;
+
+        @include mobile {
+
+        }
       }
 
       &--3 {
         top: 55%;
         right: 15%;
+
+        @include mobile {
+          top: 37%;
+          right: 15%;
+          width: 15%;
+          transform: rotate(-138deg);
+        }
       }
     }
   }
@@ -502,6 +692,8 @@ section {
       z-index: 99;
       margin-top: 100px;
       margin-right: 100px;
+      width: 100%;
+
       @include mobile {
         width: 100%;
       }
@@ -531,11 +723,15 @@ section {
 
       &--2 {
         top: 47%;
-        left: 7%;    
+        left: 7%;  
+        
+        @include mobile {
+          left: 0;
+        }
       }
 
       &--3 {
-        top: 43%;
+        top: 40%;
         left: 22%;
         z-index: 1;
       }
@@ -543,6 +739,10 @@ section {
       &--4 {
         top: 55%;
         left: 22%;
+
+        @include mobile {
+          left: 0;
+        }
       }
 
       &--5 {
@@ -564,9 +764,19 @@ section {
     }
   }
 
+  &__description-container {
+    margin-top: -200px;
+
+    @include mobile {
+      margin-top: 0;
+    }
+  }
+
   &__description {
     max-width: 400px;
   }
+
+  
 }
 
 .stores {
@@ -582,7 +792,7 @@ section {
 
     img {
       @include mobile {
-        margin-bottom: 50px;
+        margin-top: 50px;
       }
     }
   }
@@ -602,6 +812,12 @@ section {
 
 .poster {
   position: relative;
+
+  &__info {
+    @include mobile {
+      margin-top: 40px;
+    }
+  }
   
   .abs-img {
     position: absolute;
@@ -632,7 +848,7 @@ section {
       z-index: 0;
 
       @include mobile {
-        width: 75%;
+        display: none;
       }
     }
   }
@@ -641,6 +857,10 @@ section {
   &__image {
     display: block;
     margin: 0 auto;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__gallery {
@@ -689,16 +909,60 @@ section {
     position: absolute;
 
     &--sherif {
-      top: -43%;
-      right: -10%;
+      top: -13%;
+      left: -10%;
+    }
+  }
+
+  .section {
+    &__intro {
+      p {
+        width: 75%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__profile {
+    @include mobile {
+      margin: 20px 0;      
+    }
+  }
+
+  &__socials {
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__description {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__firstColumn {
+    padding-right: 5em;
+
+    @include mobile {
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  &__secondColumn {
+    padding-left: 5em;
+
+    @include mobile {
+      padding: 0;
     }
   }
 }
 
 #border-bg {
-  background-image: url('./images/paper-bg.png');
-  background-size: 490%;
-  background-position: center;
+  background-image: url('./images/paper.jpg');
+  background-size: 100%;
+  background-repeat: repeat;
 }
 
 .cactus {
@@ -706,17 +970,15 @@ section {
   left: 50% !important;
   top: auto !important;
   margin-left: -240px;
-  transform: scale(0.7) !important;
 
   @include mobile {
-    transform: scale(0.7) !important;
     margin-left: -205px;
   }
 }
 
 @keyframes movingclouds {
-  0% {margin-right: 0%;}
-  100% {margin-right: 100%;}
+  from {left: -15px;}
+  to {left: 100%;}
 }
 
 @keyframes flyingJet {
@@ -724,4 +986,10 @@ section {
   100% {left: 100%;}
 }
 
+@keyframes sway {
+  0%, 100%{ transform: rotate(-8deg);}
+  50%{ transform: rotate(6deg); }
+}
+
 @import './styles/signup';
+@import './styles/loader';

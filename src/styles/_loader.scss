@@ -1,0 +1,56 @@
+.preloader {
+  height: 100vh;
+  background-image: url('./images/paper.jpg');
+  background-size: cover;
+
+  &__svg {
+    fill: red;
+    width: 200px;
+    height: 200px;
+  }
+
+  .offset-square {
+    // -webkit-transform: translateY(-100%);
+    //         transform: translateY(-100%);
+    // transition: -webkit-transform 0.45s ease-in-out;
+    // transition: transform 0.45s ease-in-out;
+    // transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out;
+    animation: loader 10s infinite;
+  }
+
+  svg:hover .offset-square {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  svg:hover .title {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .title {
+    font-weight: bold;
+    fill: transparent;
+    -webkit-animation: blink 0.55s ease infinite both;
+            animation: blink 0.55s ease infinite both;
+  }
+  @-webkit-keyframes 'blink' {
+    50% {
+      fill: #fff;
+    }
+  }
+  @keyframes 'blink' {
+    50% {
+      fill: #fff;
+    }
+  }
+
+  @keyframes 'loader' {
+    from {transform:translateY(-200%);}
+    to {transform:translateY(0);}
+  }
+
+  @keyframes movingclouds {
+    from {left: -15px;}
+    to {left: 100%;}
+  }
+  
+}
