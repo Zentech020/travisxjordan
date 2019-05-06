@@ -15,7 +15,7 @@ class Sotres extends Component {
             <h2 className="title">WHERE TO COP</h2>
             <p>Lorem ipsum dolor st amet, consectuer adeputhtunf wijidj disj </p>
           </div>
-          <div className="row my-5">
+          <div className="row">
             <div class="col-sm">
               <div class="stores__brand d-flex justify-content-between align-items-center">
                 <img src={snkrs} />
