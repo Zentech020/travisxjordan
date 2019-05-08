@@ -1,0 +1,18 @@
+@keyframes movingclouds {
+  0% {
+    right: -700px !important;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes flyingJet {
+  0% {left: 0%;}
+  100% {left: 100%;}
+}
+
+@keyframes sway {
+  0%, 100%{ transform: rotate(-8deg);}
+  50%{ transform: rotate(6deg); }
+}

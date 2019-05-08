@@ -1,0 +1,326 @@
+.info {
+  position: relative;
+
+  &__shoe {
+    position: relative;
+    margin-bottom: 100px;
+
+    @include mobile {
+      margin: 80px 0;
+    }
+
+    .infoShoe {
+      @include mobile {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .shoe-mark {
+      position: absolute;
+
+      &--1 {
+        top:17%;
+        left: 25%;
+
+        @include tablet {
+          left: 15%;
+        }
+
+        @include mobile {
+          top: 10%;
+          left: 3%;
+        }
+      }
+
+      &--2 {
+        top:67%;
+        left: 30%;
+
+        @include tablet {
+          left: 25%;
+        }
+
+        @include mobile {
+          left: 7%;
+        }
+      }
+
+      &--3 {
+        top:47%;
+        left: 55%;
+
+        @include mobile {
+          top: 51%;
+          left: 72%;
+        }
+      }
+    }
+
+    .shoe-tips {
+      font-family: "BrushFont";
+      color: #e292ad;
+      font-size: 24px;
+      position: absolute;
+
+      @include tablet {
+        font-size: 18px;
+      }
+
+      &--1 {
+        top: 23%;
+        left: 3%;
+
+        @include tablet {
+          top:14%;
+          left: -1%;
+        }
+
+        @include mobile {
+          top: -51px;
+          left: 38%;
+          transform: rotate(-15deg);
+        }
+      }
+
+      &--2 {
+        bottom: 15%;
+        left: 3%;
+
+        @include tablet {
+          left: -2%;
+        }
+
+        @include mobile {
+          bottom: -22%;
+          left: 37%;
+        }
+      }
+
+      &--3 {
+        top: 35%;
+        right: 12%;
+
+        @include mobile {
+          top: 18%;
+          right: 2%;
+          transform: rotate(-10deg);
+        }
+      }
+    }
+    .shoe-arrow {
+      position: absolute;
+
+      &--1 {
+        top: 33%;
+        left: 23%;
+        width: 15%;
+
+        @include tablet {
+          left: -1%;
+        }
+
+        @include mobile {
+          top: 0;
+          left: 23%;
+          transform: rotate(167deg);
+        }
+      }
+
+      &--2 {
+        bottom: 3%;
+        left: 10%;
+
+        @include tablet {
+          left: 0%;
+        }
+
+        @include mobile {
+          bottom: -12%;
+          left: 23%;
+          transform: rotate(-113deg);
+          width: 50px;
+        }
+      }
+
+      &--3 {
+        top: 55%;
+        right: 15%;
+
+        @include tablet {
+          top: 46%;
+        }
+
+        @include mobile {
+          top: 37%;
+          right: 15%;
+          width: 15%;
+          transform: rotate(-138deg);
+        }
+      }
+    }
+  }
+
+  &__content {
+    max-width: 400px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__gallery {
+
+    &__shoe {
+      z-index: 99;
+      margin-top: 100px;
+      width: 100%;
+
+      @include mobile {
+        margin-top: 35px;
+      }
+    }
+
+    &__mobile-composition {
+
+      @include mobile {
+        top: -500px;
+      }
+    }
+
+    .gallery_obj {
+      position: absolute;
+
+      @include tablet {
+        position: relative;
+        margin-bottom: 50px;
+      }
+
+      @include mobile {
+        position: relative;
+      }
+
+
+
+      &--1 {
+        bottom: 27%;
+        left: 9%;
+        z-index: 0;
+        width: 150px;
+      }
+
+
+      &--2 {
+        top: 47%;
+        left: 7%;  
+        
+        @include mobile {
+          left: 0;
+        }
+      }
+
+      &--3 {
+        top: 40%;
+        left: 22%;
+        z-index: 1;
+
+        @include tablet {
+          left: -2%;
+        }
+      }
+
+      &--4 {
+        top: 55%;
+        left: 22%;
+
+        @include mobile {
+          left: 0;
+        }
+      }
+
+      &--5 {
+        top: 74%;
+        right: 39%;    
+      }
+
+      &--6 {
+        top: 40%;
+        right: 42%;
+        z-index: 1;
+
+        @include tablet {
+          right: 56%;
+        }
+      }
+
+      &--7 {
+        top: 60%;
+        right: -30%;
+        z-index: 1; 
+      }
+    }
+  }
+
+  &__description-container {
+    margin-top: -200px;
+
+    @include tablet {
+      margin-top: 0;
+    }
+
+    @include mobile {
+      margin-top: 0;
+    }
+  }
+
+  &__description {
+    max-width: 400px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  
+}
+
+.info-shoe-desktop {
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.info-shoe-tablet {
+  @include tablet {
+    width: auto;
+  }
+  
+  @include desktop {
+    display: none;
+  }
+}
+
+.info-collage-desktop {
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.info-collage-mobile {  
+  display: block;
+  margin: 40px auto;
+
+
+  @include desktop {
+    display: none;
+  }
+}

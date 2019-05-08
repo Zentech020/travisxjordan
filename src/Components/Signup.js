@@ -16,13 +16,13 @@ class Signup extends Component {
           <img src={flames} className="abs-img abs-img--flameLeft" />
           <img src={flames} className="abs-img abs-img--flameRight" />
           <div className="row justify-content-center">
-            <div className="col-sm-6">
+            <div className="col-sm-6 col-md-12">
               <div className="signup__subscribe d-flex flex-column align-items-center justify-content-between text-center">
                 <div>
                   <h4>Howdy! Wanna stay updated on future projects?</h4>
                   <p>We’re not done yet. Leave your e-mail behind to get updates</p>
                 </div>
-                <input type="text" />
+                <input type="text" placeholder="cactus.jack@gmail.com" />
                 <a href="#" className="btn btn--black">ORDER POSTER</a>
               </div>
             </div>

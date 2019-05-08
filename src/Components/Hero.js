@@ -5,7 +5,7 @@ import cactusJackLogo from '../images/cactus-jack-logo.png';
 import jordanLogo from '../images/jordan-logo.png';
 import nikeLogo from '../images/nike-logo.png';
 import smiley from '../images/smiley.png';
-import sign from '../images/hero/sign.png';
+import sign from '../images/hero/bord.png';
 import moon from '../images/moon.png';
 import cactusLeft from '../images/hero/cactus-left.png';
 import cactusRight from '../images/hero/cactus-right.png';
@@ -14,7 +14,7 @@ import flames from '../images/flame.png';
 import cactusMain from '../images/hero/cactus-main.png';
 import skeleton from '../images/hero/skeleton.png';
 import heroBg from '../images/hero/heroBg.png';
-import cloudDeamon from '../images/hero/cloudDeamons.png';
+import cloud1 from '../images/hero/cloud1.png';
 import cloud2 from '../images/hero/cloud2.png';
 import cloud3 from '../images/hero/cloud3.png';
 import jet from '../images/hero/jet.png';
@@ -63,32 +63,40 @@ class Hero extends Component {
             </div>
             <img src={smiley} className="attribute attribute--smiley" />
             <p className="attribute attribute--brushText">MAY 11TH</p>
+
+
           </div>
           <div className="hero__middle">
             <div className="row">
-              <div className="col-sm-4"></div>
-              <div className="hero__middle__shoe col-sm-4">
+              <div className="col-sm-3 hero__middle__content">
+                <p>The Cactus Jack Air Jordan 1 by Hiphop artist and label founder Travis Scott.</p>
+                <a href="#" className="btn btn--white">MORE INFO</a>
+              </div>
+              <div className="hero__middle__shoe col-sm-6">
 
               </div>
-              <div className="hero__middle__content col-sm-4">
-                <p>Quisque id mi. Cras sagittis. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Vestibulum rutrum, mi nec elementum vehicula, eros quam gravida nisl, id fringilla neque ante vel mi.</p>
+              <div className="hero__middle__content col-sm-3 ">
+                <p>Want to know where it drops?</p>
                 <a href="#" className="btn btn--black">MORE INFO</a>
               </div>
             </div>
           </div>
         </div>
 
-        <img src={sign} className="attribute attribute--sign" data-depth="0.05" />
         <img src={moon} className="attribute attribute--moon" />
         <img src={heroBg} className="attribute attribute--heroBg" data-depth="0.1" />
         <img src={cactusLittle} data-depth="0.05" className="attribute attribute--cactus-little" />
         <img src={jet} className="attribute attribute--jet" />
         <img src={bird} className="attribute attribute--bird" />
-        <img src={posterSmall} className="attribute attribute--poster" />
 
-        <img src={cloudDeamon} className="attribute attribute--cloud" />
-        <img src={cloud2} className="attribute attribute--cloud-1" />
-        <img src={cloud3} className="attribute attribute--cloud-2" />
+        <img src={cloud1} className="attribute attribute--cloud"></img>
+        <img src={cloud2} className="attribute attribute--cloud-1"></img>
+        <img src={cloud3} className="attribute attribute--cloud-2"></img>
+
+        <div className="board">
+          <img src={sign} className="attribute attribute--sign" data-depth="0.05" />
+          <img src={posterSmall} className="attribute attribute--poster" />
+        </div>
 
 
         <div className="cactus" data-depth="0.2">

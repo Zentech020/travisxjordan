@@ -1,0 +1,70 @@
+.about {
+  position: relative;
+
+  .abs-img {
+    position: absolute;
+
+    &--sherif {
+      top: -13%;
+      left: -250px;
+    }
+  }
+
+  .section {
+    &__intro {
+      p {
+        width: 75%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__profile {
+    @include mobile {
+      margin: 20px 0;      
+    }
+
+    img {
+      @include mobile {
+        width: 100%;      
+      }
+    }
+  }
+
+  &__socials {
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__description {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__firstColumn {
+    padding-right: 5em;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    @include mobile {
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  &__secondColumn {
+    padding-left: 5em;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    @include mobile {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.stores {
+  position: relative;
+
+  &__brand {
+    max-width: 800px;
+    margin: 0 auto;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    img {
+      @include mobile {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &__bag {
+    position: absolute;
+    width: 20%;
+    left: -154px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

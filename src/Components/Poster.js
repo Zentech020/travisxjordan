@@ -4,6 +4,7 @@ import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import poster from '../images/poster.png';
 import hoefIJzer from '../images/hoefijzer.png';
 import splash from '../images/splash.png';
+import { relative } from 'path';
 
 
 const client = Client.buildClient({
@@ -67,7 +68,9 @@ class Poster extends Component {
   render() {
     return (
       <section className="section poster" id="poster">
-        <img src={hoefIJzer} className="abs-img abs-img--hoefijzer" />
+        <div className="hoefijzerContainer" style={{ position: 'absolute', overflow: 'hidden', height: '400px', width:'400px', right: '0' }} >
+          <img src={hoefIJzer} className="abs-img abs-img--hoefijzer" />
+        </div>
         <img src={splash} className="abs-img abs-img--splash" />
         <div className="container poster">
           <div className="row d-flex justify-content-center my-3 text-center">

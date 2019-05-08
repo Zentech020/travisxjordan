@@ -10,6 +10,7 @@ import cactus from '../images/cactus-illustration.png';
 import momText from '../images/mom.png';
 import arrowLeft from '../images/arrow-left.png';
 import arrowRight from '../images/arrow-right.png';
+import collage from '../images/collage.png';
 
 class Info extends Component {
   render() {
@@ -48,8 +49,8 @@ class Info extends Component {
 
           <div className="row justify-content-end">
             <div className="info__gallery">
-              <img src={galleryShoe} className="info__gallery__shoe d-none d-sm-block" />
-              <div className="info__gallery__mobile-composition">
+              <img src={galleryShoe} className="info__gallery__shoe info-shoe-desktop" />
+              <div className="info__gallery__mobile-composition info-collage-desktop">
                 <img src={smiley} className="gallery_obj gallery_obj--1" />
                 <img src={travis1} className="gallery_obj gallery_obj--2" />
                 <img src={travis2} className="gallery_obj gallery_obj--3" />
@@ -57,6 +58,9 @@ class Info extends Component {
                 <img src={cactus} className="gallery_obj gallery_obj--5" />
                 <img src={momText} className="gallery_obj gallery_obj--6" />
               </div>
+            </div>
+            <div className="info-collage-mobile">
+              <img src={collage} />
             </div>
           </div>
           <div className="row info__description-container">
@@ -66,7 +70,7 @@ class Info extends Component {
               Suspendisse potenti. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Phasellus a est. Vestibulum ullamcorper mauris at ligula. Etiam rhoncus.
               In ut quam vitae odio lacinia tincidunt. Nunc nonummy metus. Vivamus quis mi. Sed libero.
               </p>
-              <img src={galleryShoe} className="info__gallery__shoe d-block d-sm-none" />
+              <img src={galleryShoe} className="info__gallery__shoe info-shoe-tablet" />
             </div>
           </div>
         </div>

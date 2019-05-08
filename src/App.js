@@ -17,11 +17,11 @@ class App extends Component {
     const { loading } = this.state;
     return (
       <div className="App">
-        {loading
+        {/* {loading
           ?
           (<Preloader />)
           :
-          (
+          ( */}
             <Fragment><Hero />
               <div id="border-bg">
                 <Info />
@@ -30,8 +30,9 @@ class App extends Component {
                 <About />
                 <Signup />
               </div>
-            </Fragment>)
-        }
+            </Fragment>
+            {/* )
+        } */}
       </div>
     );
   }

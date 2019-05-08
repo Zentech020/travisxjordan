@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "TitleFont";
+  src: url("./fonts/Futura-Condensed-Extra-Bold.otf") format("opentype"),
+}
+
+@font-face {
+  font-family: "BrushFont";
+  src: url("./fonts/NanumBrushScript-Regular.ttf") format("truetype"),
+}
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+h1 {
+  font-family: 'TitleFont', sans-serif;
+}
+
+h2 {
+  font-family: 'TitleFont', sans-serif;
+  font-size: 50px;
+
+  @include mobile {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-family: 'TitleFont', sans-serif;
+  font-size: 24px;
+}
+
+h4 {
+  font-family: 'TitleFont', sans-serif;
+  font-size: 22px;
+}
+
+p {
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.8em;
+  font-size: 16px;
+  opacity: 0.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
