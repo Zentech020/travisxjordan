@@ -5,6 +5,8 @@ import poster from '../images/poster.png';
 import hoefIJzer from '../images/hoefijzer.png';
 import splash from '../images/splash.png';
 
+// Animations
+import Fade from 'react-reveal/Fade';
 
 const client = Client.buildClient({
   domain: 'travisxjordan.myshopify.com',
@@ -72,10 +74,12 @@ class Poster extends Component {
         <div className="container poster">
           <div className="row d-flex justify-content-center my-3 text-center">
             <div className="section__intro my-3">
+              <Fade bottom cascade>
               <p className="tagline text-center">POSTER</p>
               <h2 className="title">LIMITED FAN MADE POSTER</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
-              <h4 className="d-block d-sm-none">$28.42</h4>
+                <h4 className="d-block d-sm-none">$28.42</h4>
+                </Fade>
             </div>
           </div>
           <div className="row my-3">
@@ -89,6 +93,8 @@ class Poster extends Component {
             </div>
             <div className="col-sm">
               <div className="poster__info">
+              <Fade bottom cascade>
+
                 <div className="poster__info__header">
                   <h3>DESCRIPTION</h3>
                   <h3 className="poster__info__price my-3">
@@ -116,7 +122,7 @@ class Poster extends Component {
                     <p>- at least you got the f*cking poster</p>
                   </div>
                 </Collapse>
-
+</Fade>
                 <div className="poster__shipping d-flex justify-content-between py-2" onClick={() => this.toggleShipping()}>
                   <p>Shipping</p>
                   {this.state.features_collapse ?

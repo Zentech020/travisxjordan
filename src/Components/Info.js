@@ -11,6 +11,10 @@ import momText from '../images/mom.png';
 import arrowLeft from '../images/arrow-left.png';
 import arrowRight from '../images/arrow-right.png';
 
+// Animations
+import Fade from 'react-reveal/Fade';
+import RubberBand from 'react-reveal/RubberBand'
+
 class Info extends Component {
   render() {
     return (
@@ -19,30 +23,56 @@ class Info extends Component {
           <div className="row">
             <div className="col">
               <div className="section__intro d-flex flex-column align-items-center text-center">
+                <Fade bottom cascade>
                 <p className="tagline">INFO</p>
+              
                 <h2 className="title">TRAVIS SCOTT X AIR JORDAN 1</h2>
+               
                 <p>Lorem ipsum dolor st amet, consectuer adeputhtunf wijidj disj </p>
+                </Fade>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="info__shoe col-sm d-flex justify-content-center">
-              <img className="infoShoe" src={infoShoe} />
-              <img src={markShoe} className="shoe-mark shoe-mark--1" />
-              <img src={markShoe} className="shoe-mark shoe-mark--2" />
-              <img src={markShoe} className="shoe-mark shoe-mark--3" />
+              <Fade>
+              <RubberBand delay={600}>
+                <img className="infoShoe" src={infoShoe} />
+              </RubberBand>
+             </Fade>
+                
+              <RubberBand delay={1200} fraction={0.6} cascade>
+                <img src={markShoe} className="shoe-mark shoe-mark--1" />
+
+                <img src={markShoe} className="shoe-mark shoe-mark--2" />
+        
+                <img src={markShoe} className="shoe-mark shoe-mark--3" />
+              </RubberBand>
+
+              <Fade delay={1500} fraction={0.6} cascade>
+                <img src={arrowRight} className="shoe-arrow shoe-arrow--1" />
+              
+            
+                <img src={arrowRight} className="shoe-arrow shoe-arrow--2" />
+             
+                <img src={arrowLeft} className="shoe-arrow shoe-arrow--3" />
+              </Fade>
+
+              <Fade delay={1500} fraction={0.6} cascade>
               <p className="shoe-tips shoe-tips--1">SECTRET STASH</p>
-              <img src={arrowRight} className="shoe-arrow shoe-arrow--1" />
               <p className="shoe-tips shoe-tips--2">REVERSED SWOOSH</p>
-              <img src={arrowRight} className="shoe-arrow shoe-arrow--2" />
               <p className="shoe-tips shoe-tips--3">HIGH QUALITY LEATHER</p>
-              <img src={arrowLeft} className="shoe-arrow shoe-arrow--3" />
+              
+              </Fade>
+
+
+
             </div>
           </div>
 
           <div className="row d-flex justify-content-end my-3">
             <div className="col-sm info__content">
-              <Roll>
+            <Fade bottom cascade>
                 <h4>LIMITED TRAVIS SCOTT X AIR JORDAN 1 POSTER</h4>
                 <p className="mt-2">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
@@ -50,7 +80,7 @@ class Info extends Component {
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-              </Roll>
+                </Fade>
             </div>
           </div>
 
@@ -62,27 +92,18 @@ class Info extends Component {
                 alt="none"
               />
               <div className="info__gallery__mobile-composition">
-                <Roll>
                   <img src={smiley} className="gallery_obj gallery_obj--1" />
-                </Roll>
-                <Roll>
                   <img src={travis1} className="gallery_obj gallery_obj--2" />
-                </Roll>
-                <Roll>
                   <img src={travis2} className="gallery_obj gallery_obj--3" />
-                </Roll>
-                <Roll>
                   <img src={travis3} className="gallery_obj gallery_obj--4" />
-                </Roll>
-                <RubberBand>
                   <img src={cactus} className="gallery_obj gallery_obj--5" />
-                </RubberBand>
                 <img src={momText} className="gallery_obj gallery_obj--6" />
               </div>
             </div>
           </div>
           <div className="row info__description-container">
             <div className="info__description col">
+            <Fade bottom cascade>
               <h4>LIMITED TRAVIS SCOTT X AIR JORDAN 1 POSTER</h4>
               <p>
                 Phasellus gravida semper nisi. Fusce a quam. Integer tincidunt.
@@ -95,7 +116,8 @@ class Info extends Component {
               <img
                 src={galleryShoe}
                 className="info__gallery__shoe d-block d-sm-none"
-              />
+                />
+                </Fade>
             </div>
           </div>
         </div>
