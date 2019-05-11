@@ -26,7 +26,7 @@ class About extends Component {
                     <img src={dripJ} />
                   </center>
                   <h3>PIETER JANNICK DIJKSTRA</h3>
-                  <span>SENIOR DROPBOX IMAGE EXPORTER</span>
+                  <span className="about__tags">ART DIRECTION/DESIGN/ANIMATION/RAGER</span>
                   <div className="about__socials d-flex my-3">
                     <a target="_blank" href="https://www.instagram.com/pjayofficial/">
                       <img className="pr-3" src={insta} />
@@ -47,7 +47,7 @@ class About extends Component {
                     <img src={youngZentech} />
                   </center>
                   <h3>ZENTECH</h3>
-                  <span>ONLINE EVERYTHING GUY</span>
+                  <span className="about__tags">DEVELOPER/ONLINE EVERYTHING GUY</span>
                   <div className="about__socials d-flex my-3">
                     <a target="_blank" href="https://www.instagram.com/zennobruinsma/">
                       <img className="pr-3" src={insta} />

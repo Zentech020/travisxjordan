@@ -300,6 +300,13 @@
       }
     }
 
+    &--bush {
+      top: auto !important;
+      left: auto !important;
+      right: 300px;
+      bottom: 0;
+    }
+
     &--poster {
       top: -240px !important;
       left: 409px !important;
