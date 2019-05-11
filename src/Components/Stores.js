@@ -15,9 +15,9 @@ class Sotres extends Component {
         <img src={secure_bag} className="stores__bag" />
         <div className="container stores">
           <div className="section__intro d-flex flex-column align-items-center">
-            <p className="tagline">Stores</p>
+            <p className="tagline">Raffles</p>
             <h2 className="title">WHERE TO COP</h2>
-            <p>Lorem ipsum dolor st amet, consectuer adeputhtunf wijidj disj </p>
+            <p>The Travis scott AJ1 will be available at selected retailers</p>
           </div>
           <div className="row mt-5">
             <div class="col-sm">

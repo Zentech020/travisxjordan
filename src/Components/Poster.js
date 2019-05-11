@@ -68,27 +68,25 @@ class Poster extends Component {
   render() {
     return (
       <section className="section poster" id="poster">
-        <div className="hoefijzerContainer" style={{ position: 'absolute', overflow: 'hidden', height: '400px', width:'400px', right: '0' }} >
+        <div className="hoefijzerContainer" style={{ position: 'absolute', overflow: 'hidden', height: '400px', width: '400px', right: '0' }} >
           <img src={hoefIJzer} className="abs-img abs-img--hoefijzer" />
         </div>
         <img src={splash} className="abs-img abs-img--splash" />
         <div className="container poster">
           <div className="row d-flex justify-content-center my-3 text-center">
             <div className="section__intro my-3">
-              <p className="tagline text-center">POSTER</p>
-              <h2 className="title">LIMITED FAN MADE POSTER</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
-              <h4 className="d-block d-sm-none">$28.42</h4>
+              <p className="tagline text-center">THE SHOE</p>
+              <h2 className="title">EVERYTHING YOU NEED TO KNOW</h2>
             </div>
           </div>
           <div className="row my-3">
             <div className="col-sm">
               <img src={poster} className="poster__image" />
-              <div className="poster__gallery d-flex justify-content-around my-4">
+              {/* <div className="poster__gallery d-flex justify-content-around my-4">
                 <div className="poster__gallery__card"></div>
                 <div className="poster__gallery__card"></div>
                 <div className="poster__gallery__card"></div>
-              </div>
+              </div> */}
             </div>
             <div className="col-sm">
               <div className="poster__info">
@@ -98,7 +96,7 @@ class Poster extends Component {
 
                   </h3>
                 </div>
-                <p className="my-3">Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Cras risus ipsum, faucibus ut, ullamcorper id, varius ac, leo. Donec mollis hendrerit risus. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam.Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla.</p>
+                <p className="my-3">What more can we say about this shoe that we havn’t already?</p>
                 <div className="poster__features d-flex justify-content-between py-2" onClick={() => this.toggleFeatures()}>
                   <p>Features</p>
                   {this.state.features_collapse ?
@@ -143,7 +141,6 @@ class Poster extends Component {
                 </Collapse>
 
                 <div className="poster__info__order mt-5">
-                  <p>$35.00</p>
                   <button onClick={() => this.addPoster()} className="btn btn--black">ORDER POSTER</button>
                 </div>
               </div>

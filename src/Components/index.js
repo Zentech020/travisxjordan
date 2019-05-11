@@ -5,6 +5,7 @@ import About from './About';
 import Stores from './Stores';
 import Signup from './Signup';
 import Preloader from './Preloader';
+import Disclaimer from './Disclaimer';
 
 export {
   Hero,
@@ -13,6 +14,7 @@ export {
   About,
   Stores,
   Signup,
-  Preloader
+  Preloader,
+  Disclaimer
 }
 

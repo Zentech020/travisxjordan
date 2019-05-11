@@ -15,7 +15,7 @@ class About extends Component {
           <div className="row d-flex justify-content-center my-4">
             <div className="section__intro my-3">
               <h2 className="title text-center">WHO MADE THIS SHI*T</h2>
-              <p className="text-center">Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Sed lectus.</p>
+              <p className="text-center">A tribute to Travis Scott and the Hiphop and Sneaker culture.  </p>
             </div>
           </div>
           <div className="row my-5">
@@ -35,7 +35,7 @@ class About extends Component {
                       <img src={twitter} />
                     </a>
                   </div>
-                  <p>Hi I am Pieter and I pretend to be from Amsterdam but secretely born in Den Hillah Etiam ultricies nisi vel augue. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Aliquam lobortis.</p>
+                  <p>Howdy! I'm Pieter Jannick a.k.a PJaY from Amsterdam a creative thinker, designer and illustrator from Amsterdam. Since I was a kid I've been I've always been fascinated with design, street/sneaker culture and Hiphop. </p>
                 </div>
               </div>
             </div>

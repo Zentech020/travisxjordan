@@ -22,7 +22,7 @@ class Info extends Component {
               <div className="section__intro d-flex flex-column align-items-center text-center">
                 <p className="tagline">INFO</p>
                 <h2 className="title">TRAVIS SCOTT X AIR JORDAN 1</h2>
-                <p>Lorem ipsum dolor st amet, consectuer adeputhtunf wijidj disj </p>
+                <p>A Jordan 1 with a unique twist, inspired by Texas</p>
               </div>
             </div>
           </div>
@@ -42,8 +42,8 @@ class Info extends Component {
           </div>
           <div className="row d-flex justify-content-end my-3">
             <div class="col-sm info__content">
-              <h4>LIMITED TRAVIS SCOTT X AIR JORDAN 1 POSTER</h4>
-              <p className="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <h4>MADE 2 RAGE</h4>
+              <p className="mt-2">RAGE! Travis is known for is high energy performances. The shoe debuted during his sold out Astroworld tour across America. Now it’s your turn. No Bystanders!!</p>
             </div>
           </div>
 
@@ -65,11 +65,8 @@ class Info extends Component {
           </div>
           <div className="row info__description-container">
             <div className="info__description col">
-              <h4>LIMITED TRAVIS SCOTT X AIR JORDAN 1 POSTER</h4>
-              <p>Phasellus gravida semper nisi. Fusce a quam. Integer tincidunt. Phasellus accumsan cursus velit.
-              Suspendisse potenti. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Phasellus a est. Vestibulum ullamcorper mauris at ligula. Etiam rhoncus.
-              In ut quam vitae odio lacinia tincidunt. Nunc nonummy metus. Vivamus quis mi. Sed libero.
-              </p>
+              <h4>JUST THE BEGINNING?</h4>
+              <p>The Aj1 is the 3rd collbartion between Nike and Travis. Based on rumors it seems  like there is much more on the desert horizon...</p>
               <img src={galleryShoe} className="info__gallery__shoe info-shoe-tablet" />
             </div>
           </div>

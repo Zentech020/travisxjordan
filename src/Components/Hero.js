@@ -15,8 +15,6 @@ import cactusMain from '../images/hero/cactus-main.png';
 import skeleton from '../images/hero/skeleton.png';
 import heroBg from '../images/hero/heroBg.png';
 import cloud1 from '../images/hero/cloud1.png';
-import cloud2 from '../images/hero/cloud2.png';
-import cloud3 from '../images/hero/cloud3.png';
 import jet from '../images/hero/jet.png';
 import bird from '../images/bird.png';
 import posterSmall from '../images/poster-small.png';
@@ -45,21 +43,21 @@ class Hero extends Component {
           </div>
 
           <div className="hero__mobile-menu">
-            <a href="">INFO</a>
             <a href="">STORES</a>
-            <a href="">POSTER</a>
+            <a href="">INFO</a>
+            <a href="">THE SHOE</a>
             <a href="">ABOUT</a>
 
           </div>
           <div className="hero__top">
             <div className="menu">
-              <a className="menu__info" href="#">INFO</a>
-              <a className="menu__about" href="#">ABOUT</a>
+              <a className="menu__info" href="#">STORES</a>
+              <a className="menu__about" href="#">INFO</a>
             </div>
             <h1 className="hero__title" data-depth="0.2">TRAVIS SCOTT AIR JORDAN.</h1>
             <div className="menu">
-              <a className="menu__order" href="#">ORDER POSTER</a>
-              <a className="menu__retailer" href="#">RETAILERS</a>
+              <a className="menu__order" href="#">THE SHOE</a>
+              <a className="menu__retailer" href="#">ABOUT</a>
             </div>
             <img src={smiley} className="attribute attribute--smiley" />
             <p className="attribute attribute--brushText">MAY 11TH</p>
@@ -76,8 +74,8 @@ class Hero extends Component {
 
               </div>
               <div className="hero__middle__content col-sm-3 ">
-                <p>Want to know where it drops?</p>
-                <a href="#" className="btn btn--black">MORE INFO</a>
+                <p>Want to know where it drops? Where to enter raffles?</p>
+                <a href="#" className="btn btn--black">SEE STORE LIST</a>
               </div>
             </div>
           </div>
@@ -90,9 +88,6 @@ class Hero extends Component {
         <img src={bird} className="attribute attribute--bird" />
 
         <img src={cloud1} className="attribute attribute--cloud"></img>
-        <img src={cloud2} className="attribute attribute--cloud-1"></img>
-        <img src={cloud3} className="attribute attribute--cloud-2"></img>
-
         <div className="board">
           <img src={sign} className="attribute attribute--sign" data-depth="0.05" />
           <img src={posterSmall} className="attribute attribute--poster" />

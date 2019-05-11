@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Hero, Info, About, Poster, Stores, Signup, Preloader } from './Components';
+import { Hero, Info, About, Poster, Stores, Signup, Preloader, Disclaimer } from './Components';
 
 class App extends Component {
   constructor(props) {
@@ -22,16 +22,17 @@ class App extends Component {
           (<Preloader />)
           :
           ( */}
-            <Fragment><Hero />
-              <div id="border-bg">
-                <Info />
-                <Stores />
-                <Poster />
-                <About />
-                <Signup />
-              </div>
-            </Fragment>
-            {/* )
+        <Fragment><Hero />
+          <div id="border-bg">
+            <Info />
+            <Stores />
+            <Poster />
+            <About />
+            <Signup />
+            <Disclaimer />
+          </div>
+        </Fragment>
+        {/* )
         } */}
       </div>
     );

@@ -8,6 +8,7 @@
 @import './styles/about';
 @import './styles/signup';
 @import './styles/loader';
+@import './styles/disclaimer';
 
 body {
   margin: 0;
@@ -61,7 +62,7 @@ section {
 
 .tagline {
   font-family: 'BrushFont', sans-serif;
-  color: #e292ad;
+  color: #B38198;
   font-size: 38px;
   text-transform: uppercase;
 }
