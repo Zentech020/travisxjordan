@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 class Disclaimer extends Component {
   render() {
     return (
-      <section>
-        <div className="container disclaimer">
+      <section className="disclaimer">
+        <div className="container">
           <div className="row">
             <div className="col-sm text-center">
               <div style={{ width: '75%', margin: "0 auto", }}>
