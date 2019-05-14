@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import { Hero, Info, About, Poster, Stores, Signup, Preloader, Disclaimer } from './Components';
 
 class App extends Component {
@@ -16,25 +17,26 @@ class App extends Component {
   render() {
     const { loading } = this.state;
     return (
+      <ParallaxProvider>
       <div className="App">
-        {/* {loading
+        {loading
           ?
           (<Preloader />)
           :
-          ( */}
-        <Fragment><Hero />
-          <div id="border-bg">
-            <Info />
-            <Stores />
-            <Poster />
-            <About />
-            <Signup />
-            <Disclaimer />
-          </div>
-        </Fragment>
-        {/* )
-        } */}
+          (
+            <Fragment><Hero />
+              <div id="border-bg">
+                <Info />
+                <Stores />
+                <Poster />
+                <About />
+                <Signup />
+                <Disclaimer />
+              </div>
+            </Fragment>
+          )}
       </div>
+      </ParallaxProvider>
     );
   }
 }

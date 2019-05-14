@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import snkrs from '../images/nike-logo.png';
 import offspring from '../images/offspring.png';
 import sneakerstuff from '../images/sneakerstuff.png';
@@ -11,7 +12,7 @@ import secure_bag from '../images/secure_the_bag.png';
 class Sotres extends Component {
   render() {
     return (
-      <section id="stores" className="section">
+      <section id="store" className="section">
         <img src={secure_bag} className="stores__bag" />
         <div className="container stores">
           <div className="section__intro d-flex flex-column align-items-center">
@@ -21,17 +22,20 @@ class Sotres extends Component {
           </div>
           <div className="row mt-5">
             <div class="col-sm">
+            <ScrollAnimation animateIn="fadeIn">
               <div class="stores__brand d-flex justify-content-between align-items-center">
                 <img src={snkrs} />
                 <img src={offspring} />
                 <img src={sneakerstuff} />
               </div>
-
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="fadeIn">
               <div class="stores__brand d-flex justify-content-between align-items-center mt-5" style={{ marginBottom: '85px' }}>
                 <img src={end} />
                 <img src={solebox} />
                 <img src={oqium} />
               </div>
+              </ScrollAnimation>
               <div className="d-flex justify-content-center">
                 <a href="https://hypebeast.com/2019/4/travis-scott-air-jordan-1-high-og-apparel-collection-store-list" target="_blank" className="btn btn--black">
                   SEE FULL STORE LIST

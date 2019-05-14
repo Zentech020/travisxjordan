@@ -3,7 +3,7 @@
   height: 100vh;
   width: 100%;
   background:yellow;
-  background-image: url(./images/hero/bg.jpeg);
+  background-image: url(./images/bg.jpg);
   background-size: cover;
   background-position: center;
   pointer-events: auto !important;
@@ -195,7 +195,7 @@
 
       @include mobile{
         top: 15% !important;
-        left: 2% !important;
+        left: -5% !important;
         width: 70px;
       }
     }
@@ -230,7 +230,7 @@
       right: 17%;
       font-family: BrushFont,sans-serif;
       font-size: 60px;
-      color: #e292ad;
+      color: #B38198;
       transform: rotate(10deg);
       width: 50%;
 
@@ -242,7 +242,7 @@
       @include mobile {
         top: 80% !important;
         right: -23%;    
-        left: auto!important;
+        left: auto! important;
         font-size: 30px;
       }
     }

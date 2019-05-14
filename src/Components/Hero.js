@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import Parallax from 'parallax-js'
+import { Link, animateScroll as scroll } from "react-scroll";
+
+
 import heroShoe from '../images/hero/shoe.png';
 import cactusJackLogo from '../images/cactus-jack-logo.png';
 import jordanLogo from '../images/jordan-logo.png';
@@ -13,7 +16,7 @@ import cactusLittle from '../images/hero/cactus-small.png';
 import flames from '../images/flame.png';
 import cactusMain from '../images/hero/cactus-main.png';
 import skeleton from '../images/hero/skeleton.png';
-import heroBg from '../images/hero/heroBg.png';
+import heroBg from '../images/heroBg1.png';
 import cloud1 from '../images/hero/cloud1.png';
 import jet from '../images/hero/jet.png';
 import bird from '../images/bird.png';
@@ -26,7 +29,6 @@ class Hero extends Component {
   }
 
   componentDidMount() {
-
     var scene = document.getElementById('hero');
     var parallaxInstance = new Parallax(scene, {
       clipRelativeInput: true
@@ -38,26 +40,26 @@ class Hero extends Component {
       <div className="hero" id="hero" data-relative-input="true" data-depth="0.5">
         <div className="container">
           <div className="hero__topBar text-center">
-            <p className="d-block d-sm-none">This is an fan project and is not affiliated with Nike, Jordan or Travis Scott</p>
-            <p className="d-none d-sm-block">This fan project is made by <a target="_blank" href="https://www.instagram.com/pjayofficial/">@pjayofficial</a> & <a target="_blank" href="https://www.instagram.com/zennobruinsma/" >@zentech__</a> and is not affiliated with Nike , Jordan or Travis Scott </p>
+            <p className="d-block d-sm-none">This is a fan project and is not affiliated with Nike, Jordan or Travis Scott</p>
+            <p className="d-none d-sm-block">This fan project is made by <a target="_blank" href="https://www.instagram.com/pjayofficial/">@pjayofficial</a> & <a target="_blank" href="https://www.instagram.com/zennobruinsma/" >@zentech__</a> and is not affiliated with Nike , Air Jordan or Travis Scott </p>
           </div>
 
           <div className="hero__mobile-menu">
-            <a href="">STORES</a>
-            <a href="">INFO</a>
-            <a href="">THE SHOE</a>
-            <a href="">ABOUT</a>
+            <a href="#store">STORES</a>
+            <a href="#info">INFO</a>
+            <a href="#poster">THE SHOE</a>
+            <a href="#about">ABOUT</a>
 
           </div>
           <div className="hero__top">
             <div className="menu">
-              <a className="menu__info" href="#">STORES</a>
-              <a className="menu__about" href="#">INFO</a>
+              <a className="menu__info" href="#store">STORES</a>
+              <a className="menu__about" href="#info">INFO</a>
             </div>
             <h1 className="hero__title" data-depth="0.2">TRAVIS SCOTT AIR JORDAN.</h1>
             <div className="menu">
-              <a className="menu__order" href="#">THE SHOE</a>
-              <a className="menu__retailer" href="#">ABOUT</a>
+              <a className="menu__order" href="#poster">THE SHOE</a>
+              <a className="menu__retailer" href="#about">ABOUT</a>
             </div>
             <img src={smiley} className="attribute attribute--smiley" />
             <p className="attribute attribute--brushText">MAY 11TH</p>
@@ -68,14 +70,14 @@ class Hero extends Component {
             <div className="row">
               <div className="col-sm-3 hero__middle__content">
                 <p>The Cactus Jack Air Jordan 1 by Hiphop artist and label founder Travis Scott.</p>
-                <a href="#" className="btn btn--white">MORE INFO</a>
+                <a href="#info" className="btn btn--white">MORE INFO</a>
               </div>
               <div className="hero__middle__shoe col-sm-6">
 
               </div>
               <div className="hero__middle__content col-sm-3 ">
-                <p>Want to know where it drops? Where to enter raffles?</p>
-                <a href="#" className="btn btn--black">SEE STORE LIST</a>
+                <p>Want to get a fan made poster? </p>
+                <a href="#signup" className="btn btn--black">I WANT A POSTER</a>
               </div>
             </div>
           </div>

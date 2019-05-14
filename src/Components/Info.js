@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import infoShoe from '../images/info-shoe.png';
 import markShoe from '../images/mark-shoe.png';
 import travis1 from '../images/travis-1.png';
@@ -28,7 +29,9 @@ class Info extends Component {
           </div>
           <div className="row">
             <div className="info__shoe col-sm d-flex justify-content-center">
-              <img className="infoShoe" src={infoShoe} />
+              <ScrollAnimation animateIn="fadeIn">
+                <img className="infoShoe" src={infoShoe} />
+              </ScrollAnimation>
               <img src={markShoe} className="shoe-mark shoe-mark--1" />
               <img src={markShoe} className="shoe-mark shoe-mark--2" />
               <img src={markShoe} className="shoe-mark shoe-mark--3" />
@@ -36,12 +39,12 @@ class Info extends Component {
               <img src={arrowRight} className="shoe-arrow shoe-arrow--1" />
               <p className="shoe-tips shoe-tips--2">REVERSED SWOOSH</p>
               <img src={arrowRight} className="shoe-arrow shoe-arrow--2" />
-              <p className="shoe-tips shoe-tips--3">HIGH QUALITY LEATHER</p>
+              <p className="shoe-tips shoe-tips--3">SICKO QUALITY LEATHER</p>
               <img src={arrowLeft} className="shoe-arrow shoe-arrow--3" />
             </div>
           </div>
           <div className="row d-flex justify-content-end my-3">
-            <div class="col-sm info__content">
+            <div class="col-sm-6 info__content">
               <h4>MADE 2 RAGE</h4>
               <p className="mt-2">RAGE! Travis is known for is high energy performances. The shoe debuted during his sold out Astroworld tour across America. Now it’s your turn. No Bystanders!!</p>
             </div>
@@ -49,14 +52,15 @@ class Info extends Component {
 
           <div className="row justify-content-end">
             <div className="info__gallery">
-              <img src={galleryShoe} className="info__gallery__shoe info-shoe-desktop" />
+              <ScrollAnimation animateIn="fadeIn">
+                <img src={galleryShoe} className="info__gallery__shoe info-shoe-desktop" />
+              </ScrollAnimation>
               <div className="info__gallery__mobile-composition info-collage-desktop">
                 <img src={smiley} className="gallery_obj gallery_obj--1" />
                 <img src={travis1} className="gallery_obj gallery_obj--2" />
                 <img src={travis2} className="gallery_obj gallery_obj--3" />
                 <img src={travis3} className="gallery_obj gallery_obj--4" />
-                <img src={cactus} className="gallery_obj gallery_obj--5" />
-                <img src={momText} className="gallery_obj gallery_obj--6" />
+                <img src={cactus} className="gallery_obj gallery_obj--6" />
               </div>
             </div>
             <div className="info-collage-mobile">
@@ -66,7 +70,7 @@ class Info extends Component {
           <div className="row info__description-container">
             <div className="info__description col">
               <h4>JUST THE BEGINNING?</h4>
-              <p>The Aj1 is the 3rd collbartion between Nike and Travis. Based on rumors it seems  like there is much more on the desert horizon...</p>
+              <p>The AJ1 is the 3rd collbartion between Nike and Travis. Based on rumors it seems  like there is much more on the desert horizon...</p>
               <img src={galleryShoe} className="info__gallery__shoe info-shoe-tablet" />
             </div>
           </div>

@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import Client from 'shopify-buy';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
-import poster from '../images/poster.png';
+import poster from '../images/poster-design.jpg';
 import hoefIJzer from '../images/hoefijzer.png';
 import splash from '../images/splash.png';
+import shoe from '../images/info-shoe.png';
 import { relative } from 'path';
 
 
@@ -75,18 +78,15 @@ class Poster extends Component {
         <div className="container poster">
           <div className="row d-flex justify-content-center my-3 text-center">
             <div className="section__intro my-3">
-              <p className="tagline text-center">THE SHOE</p>
+              <p className="tagline text-center">POSTER</p>
               <h2 className="title">EVERYTHING YOU NEED TO KNOW</h2>
             </div>
           </div>
           <div className="row my-3">
             <div className="col-sm">
-              <img src={poster} className="poster__image" />
-              {/* <div className="poster__gallery d-flex justify-content-around my-4">
-                <div className="poster__gallery__card"></div>
-                <div className="poster__gallery__card"></div>
-                <div className="poster__gallery__card"></div>
-              </div> */}
+              <ScrollAnimation animateIn="fadeIn">
+                <img src={poster} className="poster__image" />
+              </ScrollAnimation >
             </div>
             <div className="col-sm">
               <div className="poster__info">
@@ -96,7 +96,7 @@ class Poster extends Component {
 
                   </h3>
                 </div>
-                <p className="my-3">What more can we say about this shoe that we havn’t already?</p>
+                <p className="my-3">As a tribute to Travis his AJ1 we made this fan art. Click on the button below to get updates on when it will available. This is a fan made poster and is not affiliated with Nike, Jordan or Travis Scott</p>
                 <div className="poster__features d-flex justify-content-between py-2" onClick={() => this.toggleFeatures()}>
                   <p>Features</p>
                   {this.state.features_collapse ?
@@ -111,10 +111,10 @@ class Poster extends Component {
                 </div>
                 <Collapse isOpen={this.state.features_collapse}>
                   <div className="poster__info__specs my-3">
-                    <p>- 50 x 90 cm</p>
-                    <p>- sicko quality print</p>
-                    <p>- lit design</p>
-                    <p>- at least you got the f*cking poster</p>
+                    <p>- A2 format</p>
+                    <p>- Lit design</p>
+                    <p>- Sicko quality print</p>
+                    <p>- At least you got the f*cking poster</p>
                   </div>
                 </Collapse>
 
@@ -131,17 +131,12 @@ class Poster extends Component {
                 </div>
                 <Collapse isOpen={this.state.shipping_collapse}>
                   <div className="poster__info__specs my-3">
-                    <p>Posters will be shipped within 2 weeks. The posters will be send in a tube. See shipping rates below</p>
-                    <div className="mt-4">
-                      <p>EU: 3-5 days, 10 euro</p>
-                      <p>EU: 3-5 days, 10 euro</p>
-                      <p>EU: 3-5 days, 10 euro</p>
-                    </div>
+                    <p>Shipping info tba</p>
                   </div>
                 </Collapse>
 
                 <div className="poster__info__order mt-5">
-                  <button onClick={() => this.addPoster()} className="btn btn--black">ORDER POSTER</button>
+                  <a href="#signup" className="btn btn--black">I WANT A POSTER</a>
                 </div>
               </div>
             </div>

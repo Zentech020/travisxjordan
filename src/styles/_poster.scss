@@ -16,10 +16,7 @@
       z-index: 100;
 
       @include mobile {
-        left: -100px;
-        top: 200px;
-        right: auto;
-        z-index: 0;
+        display: none;
       }
     }
 
@@ -81,6 +78,7 @@
 
     p {
       font-family: "TitleFont";
+      opacity: 1;
     }
   }
 
@@ -89,6 +87,7 @@
 
     p {
       font-family: "TitleFont";
+      opacity: 1;
     }
   }
   &__info__order {
